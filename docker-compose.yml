@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: frontendCTF
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./source:/code
+
+    ports:
+      - 80:80
+    environment:
+      - TEAM_LINK=a60b49ed246/2
+      - PYTHONUNBUFFERED=1
